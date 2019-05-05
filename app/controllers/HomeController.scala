@@ -9,7 +9,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit assetsFinder:
   extends AbstractController(cc) {
 
   def index = Action { request =>
-    Ok(views.html.index("Hello world"))
+    Ok(views.html.index())
   }
 
 }
