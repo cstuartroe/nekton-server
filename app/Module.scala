@@ -1,20 +1,9 @@
-import javax.inject._
-
 import com.google.inject.AbstractModule
-import net.codingwell.scalaguice.ScalaModule
-import play.api.{Configuration, Environment}
-import v1.post._
+import java.time.Clock
 
-/**
-  * Sets up custom components for Play.
-  *
-  * https://www.playframework.com/documentation/latest/ScalaDependencyInjection
-  */
-class Module(environment: Environment, configuration: Configuration)
-    extends AbstractModule
-    with ScalaModule {
+class Module extends AbstractModule {
 
   override def configure() = {
-    bind[PostRepository].to[PostRepositoryImpl].in[Singleton]
   }
+
 }
